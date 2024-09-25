@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery Store Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://www.shutterstock.com/image-illustration/shopping-basket-full-variety-grocery-260nw-1978733351.jpg'); /* Replace with your image URL */
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .login-container {
+            background-color: rgba(14, 1, 1, 0.84);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+        h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #e4e9e1;
+        }
+        input[type="text"], input[type="email"], input[type="password"], input[type="radio"], input[type="date"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #eae3e3;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        .forgot-password {
+            display: block;
+            margin-top: 10px;
+            color: #007bff;
+            text-decoration: none;
+        }
+        .forgot-password:hover {
+            text-decoration: underline;
+        }
+        .error-message {
+            color: red;
+            margin-top: 10px;
+        }
+        .gender-label {
+            display: inline-block;
+            margin: 10px 5px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>LOGIN</h2>
+        <form action="login.php" method="POST">
+            <input type="text" name="name" placeholder="Full Name" required aria-label="Full Name">
+            <input type="email" name="username" placeholder="Email" required aria-label="Email">
+            <input type="password" name="password" placeholder="Password" required aria-label="Password">
+            <input type="date" name="dob" required aria-label="Date of Birth">
+            <div>
+                <label class="gender-label">
+                    <input type="radio" name="gender" value="male" required aria-label="Male"> Male
+                </label>
+                <label class="gender-label">
+                    <input type="radio" name="gender" value="female" required aria-label="Female"> Female
+                </label>
+            </div>
+            <button type="submit">Login</button>
+        </form>
+        <a href="#" class="forgot-password">Forgot your password?</a>
+        <div class="error-message"> <!-- Example error message -->
+            <!-- Display error message here if login fails -->
+        </div>
+    </div>
+</body>
+</html>

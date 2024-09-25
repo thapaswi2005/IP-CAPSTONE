@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Online Grocery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://www.360connect.com/wp-content/uploads/2020/11/image-from-rawpixel-id-912637-original-scaled.jpg');
+            background-size: 1390px;
+            background-position: center;
+            display:flex;
+            margin: 0;
+            padding: 0;
+        }
+        .contact-container {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: rgb(149, 143, 143);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #100f0f;
+            margin-bottom: 30px;
+            font-size: 28px;
+        }
+        input[type="text"], input[type="email"], textarea {
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        button {
+            width: 100%;
+            padding: 15px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        label {
+            font-size: 14px;
+            color: #555;
+        }
+        textarea {
+            height: 150px;
+        }
+        .info {
+            margin-top: 30px;
+            text-align: center;
+            font-size: 14px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="contact-container">
+        <h2>Contact Us</h2>
+        <form action="contact_action.php" method="POST">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Your full name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Your email" required>
+
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="Subject" required>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Your message..." required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+        
+        <div class="info">
+            <p>For immediate assistance, call us at: +1 (800) 123-4567</p>
+            <p>Email: support@onlinegrocery.com</p>
+        </div>
+    </div>
+</body>
+</html>
